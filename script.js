@@ -58,6 +58,20 @@ searchBtn.addEventListener("click", () => {
        </div>
        `;
        
-    });
+    })
+    .catch(() =>{
+        if(countryName.length == 0){
+            result.innerHTML =`
+            <h3> The input field cannot be empty</h3>
+            `
+        }
+        else{
+            result.innerHTML =`
+            <h3> Please enter valid country name.</h3>
+            `
+        }
+
+    })
+    
 });
 
